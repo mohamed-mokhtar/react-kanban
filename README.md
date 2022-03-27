@@ -28,6 +28,20 @@ Yet another Kanban/Trello board lib for React.
     onAddCardClick={(column) => console.log(column)}
 ```
 
+Example
+
+```jsx
+<Board
+    {...getUrlParams()}
+    onColumnRemove={console.log}
+    onColumnRename={console.log}
+    onCardRemove={console.log}
+    initialBoard={board}
+    allowAddCard={{ on: "top" }}
+    onAddCardClick={(column) => console.log(column)} // <---------- Overides the action of the current one
+  />,
+```
+
 ## 🛠 Install and usage
 
 Since this project use Hooks, you have to install them:
