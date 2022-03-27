@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import CardForm from './components/CardForm'
 
-export default function CardAdder({ column, onConfirm }) {
+export default function CardAdder({ column, onConfirm, onClickHandler }) {
   function confirmCard(card) {
     onConfirm(column, card)
     setAddingCard(false)
@@ -14,7 +14,7 @@ export default function CardAdder({ column, onConfirm }) {
       {addingCard ? (
         <CardForm onConfirm={confirmCard} onCancel={() => setAddingCard(false)} />
       ) : (
-        <button className='react-kanban-card-adder-button' onClick={() => setAddingCard(!addingCard)}>
+        <button className='react-kanban-card-adder-button' onClick={() => onClickHandler ? onClickHandler(column) : setAddingCard(!addingCard)}>
           +
         </button>
       )}

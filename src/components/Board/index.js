@@ -43,6 +43,7 @@ function UncontrolledBoard({
   disableCardDrag,
   disableColumnDrag,
   allowAddCard,
+  onAddCardClick,
   onNewCardConfirm,
 }) {
   const [board, setBoard] = useState(initialBoard)
@@ -139,8 +140,9 @@ function UncontrolledBoard({
       onColumnRename={handleColumnRename}
       disableColumnDrag={disableColumnDrag}
       disableCardDrag={disableCardDrag}
-      onCardNew={(column, card) => handleDraftCardAdd(column, card, allowAddCard)}
+      onCardNew={(column, card) => onAddCardClick ? onAddCardClick(column, card) : handleDraftCardAdd(column, card, allowAddCard)}
       allowAddCard={allowAddCard && onNewCardConfirm}
+      onAddCardClick={onAddCardClick}
     >
       {board}
     </BoardContainer>
@@ -218,6 +220,7 @@ function BoardContainer({
   onCardDragEnd,
   onCardNew,
   allowAddCard,
+  onAddCardClick,
 }) {
   function handleOnDragEnd(event) {
     const coordinates = getCoordinates(event, board)
@@ -225,9 +228,9 @@ function BoardContainer({
 
     isAColumnMove(event.type)
       ? isMovingAColumnToAnotherPosition(coordinates) &&
-        onColumnDragEnd({ ...coordinates, subject: board.columns[coordinates.source.fromPosition] })
+      onColumnDragEnd({ ...coordinates, subject: board.columns[coordinates.source.fromPosition] })
       : isMovingACardToAnotherPosition(coordinates) &&
-        onCardDragEnd({ ...coordinates, subject: getCard(board, coordinates.source) })
+      onCardDragEnd({ ...coordinates, subject: getCard(board, coordinates.source) })
   }
 
   return (
@@ -256,6 +259,7 @@ function BoardContainer({
               disableColumnDrag={disableColumnDrag}
               disableCardDrag={disableCardDrag}
               onCardNew={onCardNew}
+              onAddCardClick={onAddCardClick}
               allowAddCard={allowAddCard}
             >
               {column}
