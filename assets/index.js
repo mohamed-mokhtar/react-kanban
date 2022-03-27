@@ -72,13 +72,7 @@ render(
     onColumnRename={console.log}
     onCardRemove={console.log}
     initialBoard={board}
-    onNewCardConfirm={(card) =>
-      console.log(
-        `New card added: ${card.title}`,
-        card,
-      )
-    }
-    onAddCardClick={(column, card) => console.log("bbb", column, card)}
+    onAddCardClick={(column) => console.log(column)}
     allowAddCard={{ on: "top" }}
   />,
   document.getElementById('app')

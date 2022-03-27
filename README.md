@@ -20,6 +20,14 @@ Yet another Kanban/Trello board lib for React.
 - ♿️ Accessible: Keyboard and mobile friendly.
 - 🔌 Pluggable: For use in projects.
 
+## Updates
+
+- Added new customization hook for adding new card inside a column
+
+```jsx
+    onAddCardClick={(column) => console.log(column)}
+```
+
 ## 🛠 Install and usage
 
 Since this project use Hooks, you have to install them:
