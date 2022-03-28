@@ -1,24 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/c602758e03850fdb8b64/maintainability)](https://codeclimate.com/github/lourenci/react-kanban/maintainability)
-[![Test Coverage](https://codecov.io/gh/lourenci/react-kanban/branch/main/graph/badge.svg)](https://codecov.io/gh/lourenci/react-kanban)
-[![Build Status](https://github.com/lourenci/react-kanban/workflows/Test/badge.svg?branch=main)](https://github.com/lourenci/react-kanban/actions?query=branch%3Amain+workflow%3ATest)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-Yet another Kanban/Trello board lib for React.
-
-![Kanban Demo](https://i.imgur.com/yceKUEp.gif)
-
-### ▶️ Demo
-
-[Usage](https://nvjp3.csb.app/)
-
-[![Edit react-kanban-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-kanban-demo-nvjp3)
-
-## ❓ Why?
-
-- 👊 Reliable: 100% tested on CI; 100% coverage; 100% SemVer.
-- 🎮 Having fun: Play with Hooks 🎣 and ~~Styled Components~~.
-- ♿️ Accessible: Keyboard and mobile friendly.
-- 🔌 Pluggable: For use in projects.
+# This package is a fork from '@asseinfo/react-kanban'
 
 ## Updates
 
@@ -41,6 +21,28 @@ Example
     onAddCardClick={(column) => console.log(column)} // <---------- Overides the action of the current one
   />,
 ```
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/c602758e03850fdb8b64/maintainability)](https://codeclimate.com/github/lourenci/react-kanban/maintainability)
+[![Test Coverage](https://codecov.io/gh/lourenci/react-kanban/branch/main/graph/badge.svg)](https://codecov.io/gh/lourenci/react-kanban)
+[![Build Status](https://github.com/lourenci/react-kanban/workflows/Test/badge.svg?branch=main)](https://github.com/lourenci/react-kanban/actions?query=branch%3Amain+workflow%3ATest)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+Yet another Kanban/Trello board lib for React.
+
+![Kanban Demo](https://i.imgur.com/yceKUEp.gif)
+
+### ▶️ Demo
+
+[Usage](https://nvjp3.csb.app/)
+
+[![Edit react-kanban-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-kanban-demo-nvjp3)
+
+## ❓ Why?
+
+- 👊 Reliable: 100% tested on CI; 100% coverage; 100% SemVer.
+- 🎮 Having fun: Play with Hooks 🎣 and ~~Styled Components~~.
+- ♿️ Accessible: Keyboard and mobile friendly.
+- 🔌 Pluggable: For use in projects.
 
 ## 🛠 Install and usage
 
